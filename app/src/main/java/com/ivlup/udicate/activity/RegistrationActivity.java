@@ -5,17 +5,17 @@ import android.os.Bundle;
 
 
 import android.support.design.widget.TextInputEditText;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.ivlup.udicate.R;
 
 public class RegistrationActivity extends AppCompatActivity {
     Button register;
-    TextInputEditText login, name, email, password;
+    TextInputEditText mLogin, mName, mEmail, mPassword;
+    String login, name, email, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +24,15 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
         register = (Button) (findViewById(R.id.buttonRegister));
-        login = (TextInputEditText) (findViewById(R.id.editTextUserLogin));
-        name = (TextInputEditText) (findViewById(R.id.editTextUserName));
-        email = (TextInputEditText) (findViewById(R.id.editTextEmail));
-        password = (TextInputEditText) (findViewById(R.id.editTextPassword));
+        mLogin = (TextInputEditText) (findViewById(R.id.editTextUserLogin));
+        mName = (TextInputEditText) (findViewById(R.id.editTextUserName));
+        mEmail = (TextInputEditText) (findViewById(R.id.editTextEmail));
+        mPassword = (TextInputEditText) (findViewById(R.id.editTextPassword));
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                gatherInfo();
                 createMainIntent();
             }
         });
@@ -44,6 +45,14 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     private void gatherInfo() {
-
+        if (mEmail.getText().length() > 3 && mPassword.getText().length() > 3) {
+            email = String.valueOf(mEmail.getText());
+            password = String.valueOf(mPassword.getText());
+            login = String.valueOf(mLogin.getText());
+            name = String.valueOf(mName.getText());
+        }
+        else {
+            Toast.makeText(this, "Не все поля заполнены!" , Toast.LENGTH_SHORT).show();
+        }
     }
 }
