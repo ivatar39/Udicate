@@ -26,7 +26,7 @@
         <activity android:name=".activity.RegistrationActivity"></activity>
         <activity android:name=".activity.SwipeActivity"></activity>
         <activity android:name=".activity.LoginActivity"></activity>
-        <activity android:name=".activity.ChooseSubjectsActivity"></activity>
+        <activity android:name=".activity.SubjectsActivity"></activity>
     </application>
 
 </manifest>

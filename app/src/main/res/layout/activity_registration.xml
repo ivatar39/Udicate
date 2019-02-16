@@ -104,7 +104,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:text="Родитель"/>
         </RadioGroup>
-        <Button
+        <android.support.design.button.MaterialButton
             android:textSize="24sp"
             android:id="@+id/buttonRegister"
             style="@style/Widget.MaterialComponents.Button"

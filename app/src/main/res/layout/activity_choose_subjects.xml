@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/colorPrimaryDark"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
 <android.support.v7.widget.RecyclerView
     android:id="@+id/recylcler_subjects"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -6,3 +13,15 @@
     android:layout_height="match_parent">
 
 </android.support.v7.widget.RecyclerView>
+<android.support.design.button.MaterialButton
+    android:layout_alignParentBottom="true"
+    android:layout_marginTop="16dp"
+    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+    android:id="@+id/button_accept_subjects"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="wrap_content"
+    android:text="принять"
+    android:background="#ffffff"
+    android:textColor="@color/colorAccentDark"/>
+</RelativeLayout>

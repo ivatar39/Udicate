@@ -10,7 +10,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.TextView;
 
 import com.ivlup.udicate.CardStackAdapter;
-import com.ivlup.udicate.PersonItem;
+import com.ivlup.udicate.backend.binding.PersonItem;
 import com.ivlup.udicate.backend.education.Person;
 import com.ivlup.udicate.R;
 import com.ivlup.udicate.PersonDiffCallback;

@@ -16,7 +16,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ivlup.udicate.PersonItem;
+import com.ivlup.udicate.backend.binding.PersonItem;
 import com.ivlup.udicate.R;
 import com.ivlup.udicate.activity.SwipeActivity;
 import com.ivlup.udicate.backend.DB;
