@@ -33,14 +33,14 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 gatherInfo();
-                createMainIntent();
+                createSubjectsIntent();
             }
         });
 
     }
 
-    private void createMainIntent() {
-        Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
+    private void createSubjectsIntent() {
+        Intent intent = new Intent(RegistrationActivity.this, SubjectsActivity.class);
         startActivity(intent);
     }
 

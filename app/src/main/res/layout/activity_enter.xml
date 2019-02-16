@@ -49,17 +49,17 @@
                 android:hint="Пароль" />
         </android.support.design.widget.TextInputLayout>
 
-        <Button
-            android:textSize="24sp"
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:id="@+id/buttonEnter"
-            style="@style/Widget.MaterialComponents.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:text="Войти" />
-
+            android:text="войти"
+            android:background="#ffffff"
+            android:textColor="@color/colorAccentDark"
+           />
 
     </LinearLayout>
 </ScrollView>

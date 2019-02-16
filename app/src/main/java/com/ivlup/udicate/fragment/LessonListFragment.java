@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ivlup.udicate.R;
-import com.ivlup.udicate.LessonItem;
+import com.ivlup.udicate.backend.binding.LessonItem;
 import com.ivlup.udicate.backend.Temp;
 import com.ivlup.udicate.backend.education.Lesson;
 import com.xwray.groupie.GroupAdapter;
@@ -54,10 +54,8 @@ public class LessonListFragment extends Fragment {
 
         ArrayList<Item> items = new ArrayList<>();
 
-        if (Temp.lessons.size()==0) Log.i("MyLog","Array empty!");
 
         for (Lesson less : Temp.lessons.values()) {
-            if (Temp.lessons.size()==0) Log.i("MyLog","Array empty!");
             items.add(new LessonItem(less));
         }
         adapter.addAll(items);
