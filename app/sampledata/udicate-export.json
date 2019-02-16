@@ -1,0 +1,83 @@
+{
+  "education" : {
+    "groups" : [ {
+      "id" : "g0",
+      "name" : "Стендаперы",
+      "organization" : "org0",
+      "students" : [ "a0", "a1" ]
+    } ],
+    "lessons" : [ {
+      "date" : {
+        "day" : "19.12.2018",
+        "duration" : "2:0",
+        "start" : "17:30"
+      },
+      "group" : {
+        "a0" : true,
+        "a1" : true
+      },
+      "id" : "0",
+      "name" : "Урок по панчам",
+      "organization" : "org0",
+      "place" : "Конференц зал",
+      "status" : "0",
+      "teachers" : [ "l4Do6h3T8ubkrWXfO1ZtnXNAihd2", "x8Yk0d9mq0PvTACzhPyfQCeE8Ar2" ]
+    } ],
+    "moduls" : [ {
+      "group" : "g0",
+      "lessons" : "0",
+      "name" : "Курсы по панчингу"
+    } ]
+  },
+  "organizations" : {
+    "org0" : {
+      "employees" : [ "l4Do6h3T8ubkrWXfO1ZtnXNAihd2", "LYhi9jCZ6OZyiWQNkm8XAkbGxmu1" ],
+      "id" : "org0",
+      "name" : "Академия Гениев"
+    }
+  },
+  "users" : {
+    "persons" : {
+      "a0" : {
+        "avatar" : "https://firebasestorage.googleapis.com/v0/b/udicate.appspot.com/o/imgs%2Favatars%2Fstudent_0.jpg?alt=media&token=0a85de41-6aae-40b1-a291-a3f0ea8be31c",
+        "child" : false,
+        "email" : "artemon1002@gmail.com",
+        "id" : "a0",
+        "name" : "Artem",
+        "parent" : false,
+        "phone" : "89218502916",
+        "surname" : "Sakovskiy"
+      },
+      "a1" : {
+        "avatar" : "https://firebasestorage.googleapis.com/v0/b/udicate.appspot.com/o/imgs%2Favatars%2Fuser_1.jpg?alt=media&token=fb592791-af94-4366-88af-37c4508e4550",
+        "child" : false,
+        "email" : "ivlupsecond@gmail.com",
+        "id" : "1",
+        "name" : "Ivan",
+        "parent" : false,
+        "phone" : "89999999999",
+        "surname" : "Taranov"
+      }
+    },
+    "teachers" : {
+      "l4Do6h3T8ubkrWXfO1ZtnXNAihd2" : {
+        "avatar" : "https://firebasestorage.googleapis.com/v0/b/udicate.appspot.com/o/imgs%2Favatars%2Fstudent_0.jpg?alt=media&token=0a85de41-6aae-40b1-a291-a3f0ea8be31c",
+        "email" : "artemon1002@gmail.com",
+        "id" : "l4Do6h3T8ubkrWXfO1ZtnXNAihd2",
+        "name" : "Artem",
+        "organizations" : [ "org0", "org1" ],
+        "phone" : "89218502916",
+        "surname" : "Sakovskiy"
+      },
+      "x8Yk0d9mq0PvTACzhPyfQCeE8Ar2" : {
+        "avatar" : "https://firebasestorage.googleapis.com/v0/b/udicate.appspot.com/o/imgs%2Favatars%2Fuser_1.jpg?alt=media&token=fb592791-af94-4366-88af-37c4508e4550",
+        "email" : "ivlupsecond@gmail.com",
+        "id" : "x8Yk0d9mq0PvTACzhPyfQCeE8Ar2",
+        "name" : "Ivan",
+        "organizations" : [ "org0" ],
+        "phone" : "89999999999",
+        "surname" : "Taranov"
+      }
+    }
+  }
+}
