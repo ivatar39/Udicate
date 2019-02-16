@@ -23,17 +23,17 @@ public class SubjectsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_enter);
+        setContentView(R.layout.activity_choose_subjects);
 
         mRecyclerView = (RecyclerView) (findViewById(R.id.recylcler_subjects));
         GroupAdapter adapter = new GroupAdapter();
         mRecyclerView.setAdapter(adapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         adapter.clear();
-
+        subjectList = new ArrayList<>();
         ArrayList<Item> items = new ArrayList<>();
         for (int i = 0; i < 4; i ++) {
-            Subject subject =new Subject("Хуематика", false, "https://www.pic.com.kw/slider2.png");
+            Subject subject =new Subject("Математика", false, "https://www.pic.com.kw/slider2.png");
             subjectList.add(subject);
         }
 

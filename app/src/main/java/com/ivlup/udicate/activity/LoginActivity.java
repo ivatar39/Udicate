@@ -2,15 +2,14 @@ package com.ivlup.udicate.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.ivlup.udicate.R;
+import com.ivlup.udicate.backend.repository.FirebaseRepository;
 
 public class LoginActivity extends AppCompatActivity {
     Button mEnter;
@@ -31,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 gatherInfo();
-                createMainIntent();
+                //createMainIntent();
             }
         });
 
@@ -43,13 +42,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void gatherInfo() {
-        if (mEnter.getText().length() > 3 && mPassword.getText().length() > 3) {
-            email = String.valueOf(mEnter.getText());
+        //if (mEnter.getText().length() > 3 && mPassword.getText().length() > 3) {
+            email = String.valueOf(mlogin.getText());
             password = String.valueOf(mPassword.getText());
-        }
-        else {
-            Toast.makeText(this, "Не все поля заполнены!" , Toast.LENGTH_SHORT).show();
-        }
+            FirebaseRepository.emailPasswordLogin(this, FirebaseAuth.getInstance(), email, password);
+
+      //  else Toast.makeText(this, "Не все поля заполнены!" , Toast.LENGTH_SHORT).show();
+
     }
 
 }

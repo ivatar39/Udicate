@@ -48,7 +48,7 @@ public class FirebaseUIActivity extends AppCompatActivity implements DB.Callback
                startActivity(intent);
             }
         });
-        createSignInIntent();
+        //createSignInIntent();
 
         mBtReg.setOnClickListener(new View.OnClickListener() {
             @Override

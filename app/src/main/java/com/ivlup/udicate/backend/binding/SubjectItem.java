@@ -26,7 +26,7 @@ public class SubjectItem extends BindableItem<SubjectItemBinding> {
                 viewBinding.subjectCheckBox.toggle();
             }
         });
-        Picasso.get().load(subject.getImage()).into(viewBinding.ivSubject);
+        //Picasso.get().load(subject.getImage()).into(viewBinding.ivSubject);
     }
 
     @Override
