@@ -15,15 +15,31 @@
         android:layout_marginRight="16dp"
         android:orientation="vertical">
 
-
-
         <android.support.design.widget.TextInputLayout
+            android:textColorHint="@color/colorAccent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp">
 
             <android.support.design.widget.TextInputEditText
+                android:textColorHighlight="@color/colorAccent"
+                android:id="@+id/editTextUserLogin"
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Логин"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorAccent"/>
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:textColorHint="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:textColorHighlight="@color/colorAccent"
                 android:id="@+id/editTextUserName"
                 android:inputType="textPersonName"
                 android:layout_width="match_parent"
@@ -34,6 +50,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
+            android:textColorHint="@color/colorAccent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp">
@@ -47,6 +64,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
+            android:textColorHint="@color/colorAccent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true"
@@ -61,6 +79,31 @@
                 android:hint="Пароль" />
         </android.support.design.widget.TextInputLayout>
 
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Выберите роль:"
+            android:textColor="@color/colorAccent"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:text="Преподаватель"/>
+            <RadioButton
+                android:layout_marginTop="4dp"
+                android:textColor="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:text="Родитель"/>
+        </RadioGroup>
         <Button
             android:textSize="24sp"
             android:id="@+id/buttonRegister"
