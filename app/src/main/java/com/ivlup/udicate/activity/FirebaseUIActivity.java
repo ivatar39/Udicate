@@ -44,8 +44,8 @@ public class FirebaseUIActivity extends AppCompatActivity implements DB.Callback
         mBtEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                createSignInIntent();
+               Intent intent = new Intent(FirebaseUIActivity.this, LoginActivity.class);
+               startActivity(intent);
             }
         });
         createSignInIntent();
@@ -64,6 +64,7 @@ public class FirebaseUIActivity extends AppCompatActivity implements DB.Callback
     }
 
     public void createSignInIntent() {
+
         // [START auth_fui_create_intent]
         // Choose authentication providers
         List<AuthUI.IdpConfig> providers = Arrays.asList(
