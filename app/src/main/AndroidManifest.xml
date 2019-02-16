@@ -25,6 +25,7 @@
         </activity>
         <activity android:name=".activity.RegistrationActivity"></activity>
         <activity android:name=".activity.SwipeActivity"></activity>
+        <activity android:name=".activity.LoginActivity"></activity>
     </application>
 
 </manifest>

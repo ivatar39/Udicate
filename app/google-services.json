@@ -47,6 +47,14 @@
           }
         },
         {
+          "client_id": "1043668029556-9qvjsqc88avndb19qoose5n5004ug5du.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ivlup.udicate",
+            "certificate_hash": "ac662c4cd1c0a6541744652721bd79f733d9f729"
+          }
+        },
+        {
           "client_id": "1043668029556-bgg854r1qbujht799jguj03mpvs4ekpm.apps.googleusercontent.com",
           "client_type": 3
         }
