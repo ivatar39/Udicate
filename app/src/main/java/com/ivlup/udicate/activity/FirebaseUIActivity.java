@@ -53,9 +53,14 @@ public class FirebaseUIActivity extends AppCompatActivity implements DB.Callback
         mBtReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                delete();
+                createRegIntent();
             }
         });
+    }
+
+    private void createRegIntent() {
+        Intent intent = new Intent(FirebaseUIActivity.this, RegistrationActivity.class);
+        startActivity(intent);
     }
 
     public void createSignInIntent() {

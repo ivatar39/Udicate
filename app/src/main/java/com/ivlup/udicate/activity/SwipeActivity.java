@@ -171,7 +171,7 @@ public class SwipeActivity extends AppCompatActivity implements CardStackListene
         manager.setDirections(Direction.HORIZONTAL);
         manager.setCanScrollHorizontal(true);
         manager.setCanScrollVertical(true);
-        adapter = new CardStackAdapter(this, createSpots());
+        adapter = new CardStackAdapter(this, createPersons());
         cardStackView = findViewById(R.id.card_stack_view);
         cardStackView.setLayoutManager(manager);
         cardStackView.setAdapter(adapter);
@@ -181,7 +181,7 @@ public class SwipeActivity extends AppCompatActivity implements CardStackListene
         List<Person> oldList = adapter.getPersons();
         List<Person> newList = new ArrayList<Person>() {{
             addAll(adapter.getPersons());
-            addAll(createSpots());
+            addAll(createPersons());
         }};
         PersonDiffCallback callback = new PersonDiffCallback(oldList, newList);
         DiffUtil.DiffResult result = DiffUtil.calculateDiff(callback);
@@ -191,7 +191,7 @@ public class SwipeActivity extends AppCompatActivity implements CardStackListene
 
     private void reload() {
         List<Person> oldList = adapter.getPersons();
-        List<Person> newList = createSpots();
+        List<Person> newList = createPersons();
         PersonDiffCallback callback = new PersonDiffCallback(oldList, newList);
         DiffUtil.DiffResult result = DiffUtil.calculateDiff(callback);
         adapter.setPersons(newList);
@@ -203,7 +203,7 @@ public class SwipeActivity extends AppCompatActivity implements CardStackListene
         List<Person> newList = new ArrayList<Person>() {{
             addAll(adapter.getPersons());
             for (int i = 0; i < size; i++) {
-                add(manager.getTopPosition(), createSpot());
+                add(manager.getTopPosition(), createPerson());
             }
         }};
         PersonDiffCallback callback = new PersonDiffCallback(oldList, newList);
@@ -217,7 +217,7 @@ public class SwipeActivity extends AppCompatActivity implements CardStackListene
         List<Person> newList = new ArrayList<Person>() {{
             addAll(adapter.getPersons());
             for (int i = 0; i < size; i++) {
-                add(createSpot());
+                add(createPerson());
             }
         }};
         PersonDiffCallback callback = new PersonDiffCallback(oldList, newList);
@@ -262,11 +262,11 @@ public class SwipeActivity extends AppCompatActivity implements CardStackListene
         result.dispatchUpdatesTo(adapter);
     }
 
-    private Person createSpot() {
+    private Person createPerson() {
         return new Person("Yasaka Shrine", "Kyoto", "https://source.unsplash.com/Xq1ntWruZQI/600x800");
     }
 
-    private List<Person> createSpots() {
+    private List<Person> createPersons() {
         List<Person> people = new ArrayList<>();
 
         for (int i = 0; i < Temp.lessons_students.get(Temp.t_lesson_id).size(); i++) {

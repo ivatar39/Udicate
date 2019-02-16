@@ -18,7 +18,7 @@ public class RegistrationActivity extends AppCompatActivity {
     Fragment registration, choose;
     FragmentTransaction fTrans;
     Button submit;
-//Работает блядь
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
