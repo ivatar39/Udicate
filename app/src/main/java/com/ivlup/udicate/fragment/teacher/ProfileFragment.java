@@ -7,12 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ivlup.udicate.R;
-import com.ivlup.udicate.backend.Temp;
+import com.ivlup.udicate.backend.repository.UserProfileRepository;
 import com.squareup.picasso.Picasso;
 
 public class ProfileFragment extends Fragment {
@@ -28,20 +27,22 @@ public class ProfileFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         ImageView mProfilePic = (ImageView) view.findViewById(R.id.profile_pic);
-       // Picasso.get().load(Temp.teacher.avatar).resize(300,400).centerCrop().into(mProfilePic);
+        if (!UserProfileRepository.getTeacher().avatar.equals(""))
+            Picasso.get().load(UserProfileRepository.getTeacher().avatar).resize(300,400).centerCrop().into(mProfilePic);
 
         TextView mName = (TextView) view.findViewById(R.id.profile_name);
-       // mName.setText(Temp.teacher.name+" "+Temp.teacher.surname);
+        mName.setText(UserProfileRepository.getTeacher().name);
 
         TextView mStage = (TextView) view.findViewById(R.id.profile_stage);
-       // mStage.setText(Temp.teacher.email);
+        // mStage.setText(Temp.teacher.email);
         TextView mSpeciality = (TextView) view.findViewById(R.id.profile_speciality);
-       // mSpeciality.setText(Temp.teacher.phone);
+        // mSpeciality.setText(Temp.teacher.phone);
 
         TextView mAbout = (TextView) view.findViewById(R.id.profile_about);
-       // mAbout.setText(Temp.teacher.info);
+        // mAbout.setText(Temp.teacher.info);
 
         TextView mPlace = (TextView)  view.findViewById(R.id.profile_work);
         mPlace.setText("Академия гениев");
+
     }
 }

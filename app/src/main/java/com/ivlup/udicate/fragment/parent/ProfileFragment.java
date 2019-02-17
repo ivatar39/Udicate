@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ivlup.udicate.R;
+import com.ivlup.udicate.backend.repository.UserProfileRepository;
+import com.squareup.picasso.Picasso;
 
 public class ProfileFragment extends Fragment {
     @Override
@@ -25,10 +27,11 @@ public class ProfileFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         ImageView mProfilePic = (ImageView) view.findViewById(R.id.profile_pic);
-        // Picasso.get().load(Temp.teacher.avatar).resize(300,400).centerCrop().into(mProfilePic);
+        if (!UserProfileRepository.getPerson().avatar.equals(""))
+            Picasso.get().load(UserProfileRepository.getPerson().avatar).resize(300,400).centerCrop().into(mProfilePic);
 
         TextView mName = (TextView) view.findViewById(R.id.profile_name);
-        // mName.setText(Temp.teacher.name+" "+Temp.teacher.surname);
+        mName.setText(UserProfileRepository.getPerson().name);
 
         TextView mStage = (TextView) view.findViewById(R.id.profile_stage);
         // mStage.setText(Temp.teacher.email);
