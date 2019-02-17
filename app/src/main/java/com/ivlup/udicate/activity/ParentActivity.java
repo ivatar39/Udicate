@@ -7,7 +7,6 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -22,6 +21,7 @@ public class ParentActivity extends AppCompatActivity {
     private static final String SELECTED_ITEM = "arg_selected_item";
     private int mSelectedItem;
     private Fragment mOrganizations, mProfile, mLessonsPerson;
+    private Toolbar myToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class ParentActivity extends AppCompatActivity {
             }
         });
 
-        Toolbar myToolbar =  findViewById(R.id.my_pt_toolbar);
+        myToolbar =  findViewById(R.id.my_pt_toolbar);
         setSupportActionBar(myToolbar);
 
         MenuItem selectedItem;
@@ -116,9 +116,8 @@ public class ParentActivity extends AppCompatActivity {
     }
 
     private void updateToolbarText(CharSequence text) {
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setTitle(text);
+        if (myToolbar != null) {
+            myToolbar.setTitle(text);
         }
     }
 

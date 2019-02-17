@@ -1,5 +1,6 @@
 package com.ivlup.udicate.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
@@ -39,6 +40,18 @@ public class EnterActivity extends AppCompatActivity implements LoginRegReposito
         LoginRegRepository.registerCallBack(this);
     }
 
+    private void createTeacherIntent() {
+        //Перход на активность
+        Intent intent = new Intent(EnterActivity.this, TeacherActivity.class);
+        startActivity(intent);
+    }
+
+    private void createPersonIntent() {
+        //Перход на активность
+        Intent intent = new Intent(EnterActivity.this, ParentActivity.class);
+        startActivity(intent);
+    }
+
     private void gatherInfo() {
         if (mLogin.getText().toString().length() > 3 && mPassword.getText().toString().length() > 3) {
             email = mLogin.getText().toString();
@@ -63,14 +76,18 @@ public class EnterActivity extends AppCompatActivity implements LoginRegReposito
 
     }
 
+
+
     @Override
     public void personInfoBack() {
         if (!"".equals(UserProfileRepository.getType())){
             if("teacher".equals(UserProfileRepository.getType())){
                 //Открываем профиль учителя
+                createTeacherIntent();
             }
             else {
                 //Открываем профиль родителя
+                createPersonIntent();
             }
 
         }

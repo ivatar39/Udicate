@@ -63,7 +63,7 @@ public abstract class UserProfileRepository {
                 try {
                     setPerson(dataSnapshot.getValue(Person.class));
                     Log.i("MyLog", getPerson().name);
-                    setType("Person");
+                    setType("person");
                     callback.personInfoBack();
                 }
                 catch (Exception e){
@@ -87,7 +87,7 @@ public abstract class UserProfileRepository {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 try {
                     setTeacher(dataSnapshot.getValue(Teacher.class));
-                    setType("Teacher");
+                    setType("teacher");
                     Log.i("MyLog", getTeacher().name);
                     callback.personInfoBack();
                 }
@@ -118,8 +118,8 @@ public abstract class UserProfileRepository {
         getPersonByUid(String.valueOf(user_info.keySet().toArray()[0]));
     }
 
-    public static void getUserByUid(String token){
-        getPersonByUid(token);
-        getTeacherByUid(token);
+    public static void getUserByUid(String uid){
+        getPersonByUid(uid);
+        getTeacherByUid(uid);
     }
 }

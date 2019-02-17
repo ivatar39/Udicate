@@ -60,6 +60,12 @@ public class RegistrationActivity extends AppCompatActivity implements LoginRegR
         startActivity(intent);
     }
 
+
+    private void createTeacherIntent() {
+        //Перход на активность
+        Intent intent = new Intent(RegistrationActivity.this, TeacherActivity.class);
+        startActivity(intent);
+    }
     private void gatherInfo() {
         // Перевод к нужному виду
         email    = mEmail.getText().toString();
@@ -82,6 +88,7 @@ public class RegistrationActivity extends AppCompatActivity implements LoginRegR
 
                 Map<String, Object> user_info = new HashMap<>();
                 user_info.put("email", email);
+                user_info.put("name", name);
                 user_info.put("id", uid);
                 user_info.put("avatar", "gs://udicate.appspot.com/imgs/avatars/1.png");
                 user_info.put("child", false);
@@ -98,6 +105,7 @@ public class RegistrationActivity extends AppCompatActivity implements LoginRegR
 
                 Map<String, Object> user_info = new HashMap<>();
                 user_info.put("email", email);
+                user_info.put("name", name);
                 user_info.put("id", uid);
                 user_info.put("avatar", "gs://udicate.appspot.com/imgs/avatars/1.png");
                 user_info.put("child", false);
@@ -120,7 +128,7 @@ public class RegistrationActivity extends AppCompatActivity implements LoginRegR
         if (!"".equals(UserProfileRepository.getType())){
             if("teacher".equals(UserProfileRepository.getType())){
                 //Открываем профиль учителя
-                createSubjectsIntent();
+                createTeacherIntent();
             }
             else {
                 //Открываем профиль родителя

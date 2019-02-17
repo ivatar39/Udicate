@@ -33,6 +33,7 @@
         <activity android:name=".activity.SubjectsActivity"
             android:screenOrientation="portrait"></activity>
         <activity android:name=".activity.ParentActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:screenOrientation="portrait"></activity>
     </application>
 
