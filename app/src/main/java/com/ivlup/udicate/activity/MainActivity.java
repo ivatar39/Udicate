@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -42,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Toolbar myToolbar =  findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
         MenuItem selectedItem;
         if (savedInstanceState != null) {
             mSelectedItem = savedInstanceState.getInt(SELECTED_ITEM, 2);
@@ -69,6 +73,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_exit:
+                signOut();
+                return true;
+                default: return super.onOptionsItemSelected(item);
+        }
+    }
     private void selectFragment(MenuItem item) {
 
         final FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();

@@ -1,16 +1,9 @@
 <resources>
     <string name="app_name">Udicate</string>
 
-    <!-- NavigationView -->
-    <string name="open_drawer">Open drawer</string>
-    <string name="close_drawer">Close drawer</string>
-    <string name="reload">Reload</string>
-    <string name="add_one_spot_at_first">Add one person at first</string>
-    <string name="add_two_spots_at_first">Add two persons at first</string>
-    <string name="add_one_spot_at_last">Add one person at last</string>
-    <string name="add_two_spots_at_last">Add two persons at last</string>
-    <string name="remove_one_spot_at_first">Remove one person at first</string>
-    <string name="remove_two_spots_at_first">Remove two persons at first</string>
-    <string name="remove_one_spot_at_last">Remove one person at last</string>
-    <string name="remove_two_spots_at_last">Remove two persons at last</string>
+    <string name="profile">Профиль</string>
+    <string name="organizations">Организации</string>
+    <string name="lessons">Занятия</string>
+
+    <string name="exit">Выход</string>
 </resources>
