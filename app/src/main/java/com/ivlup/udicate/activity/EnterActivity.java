@@ -10,10 +10,10 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.ivlup.udicate.R;
-import com.ivlup.udicate.backend.repository.LoginRepository;
+import com.ivlup.udicate.backend.repository.LoginRegRepository;
 import com.ivlup.udicate.backend.repository.UserProfileRepository;
 
-public class EnterActivity extends AppCompatActivity implements LoginRepository.Callback, UserProfileRepository.Callback{
+public class EnterActivity extends AppCompatActivity implements LoginRegRepository.Callback, UserProfileRepository.Callback{
     Button mEnter;
     String email, password;
     TextInputEditText mLogin, mPassword;
@@ -36,24 +36,24 @@ public class EnterActivity extends AppCompatActivity implements LoginRepository.
         });
 
         UserProfileRepository.registerCallBack(this);
-        LoginRepository.registerCallBack(this);
+        LoginRegRepository.registerCallBack(this);
     }
 
     private void gatherInfo() {
         if (mLogin.getText().toString().length() > 3 && mPassword.getText().toString().length() > 3) {
             email = mLogin.getText().toString();
             password = mPassword.getText().toString();
-            LoginRepository.emailPasswordLogin(this, FirebaseAuth.getInstance(), email, password);
+            LoginRegRepository.emailPasswordLogin(this, FirebaseAuth.getInstance(), email, password);
         }
         else Toast.makeText(this, "Не все поля заполнены!" , Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void userBack() {
-        if (null != LoginRepository.getUser()){
+        if (null != LoginRegRepository.getUser()){
             Toast.makeText(this, "Успешная авторизация", Toast.LENGTH_LONG).show();
-            Log.i("MyLog", LoginRepository.getUser().getUid());
-            UserProfileRepository.getUserByUid(LoginRepository.getUser().getUid());
+            Log.i("MyLog", LoginRegRepository.getUser().getUid());
+            UserProfileRepository.getUserByUid(LoginRegRepository.getUser().getUid());
 
         }
         else{

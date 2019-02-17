@@ -11,6 +11,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.ivlup.udicate.backend.users.Person;
 import com.ivlup.udicate.backend.users.Teacher;
 
+import java.util.Map;
+
 public abstract class UserProfileRepository {
     private static String type;
     private static Person person;
@@ -101,6 +103,19 @@ public abstract class UserProfileRepository {
             }
         });
 
+    }
+
+    public static void createTeacherByUid(Map<String, Object> user_info) {
+
+        mDatabase.child("users").child("teachers").updateChildren(user_info);
+        getTeacherByUid(String.valueOf(user_info.keySet().toArray()[0]));
+
+
+    }
+
+    public static void createPersonByUid(Map<String, Object> user_info) {
+        mDatabase.child("users").child("persons").updateChildren(user_info);
+        getPersonByUid(String.valueOf(user_info.keySet().toArray()[0]));
     }
 
     public static void getUserByUid(String token){

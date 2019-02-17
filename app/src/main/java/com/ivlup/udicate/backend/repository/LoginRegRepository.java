@@ -10,7 +10,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public abstract class LoginRepository {
+public abstract class LoginRegRepository {
     //Для входа в Firebase
     private static FirebaseAuth mAuth;
     // Пользователь из authentification
@@ -21,11 +21,11 @@ public abstract class LoginRepository {
     }
 
     public static void setUser(FirebaseUser user) {
-        LoginRepository.user = user;
+        LoginRegRepository.user = user;
     }
 
     public static void setmAuth(FirebaseAuth mAuth) {
-        LoginRepository.mAuth = mAuth;
+        LoginRegRepository.mAuth = mAuth;
     }
 
     public interface Callback{
@@ -36,7 +36,7 @@ public abstract class LoginRepository {
 
 
     public static void registerCallBack(Callback callback){
-        LoginRepository.callback = callback;
+        LoginRegRepository.callback = callback;
     }
 
     public static boolean checkUser(){
@@ -66,5 +66,25 @@ public abstract class LoginRepository {
                 });
     }
 
+    public static void passwordRegistration(Activity activity, FirebaseAuth fa, String email, String password){
+        setmAuth(fa);
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(activity, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d("MyLog", "createUserWithEmail:success");
+                            setUser(mAuth.getCurrentUser());
+                            callback.userBack();
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w("MyLog", "createUserWithEmail:failure", task.getException());
+                        }
+
+                        // ...
+                    }
+                });
+    }
 
 }
