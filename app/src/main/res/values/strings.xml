@@ -3,7 +3,9 @@
 
     <string name="profile">Профиль</string>
     <string name="organizations">Организации</string>
+    <string name="organization">Организация</string>
     <string name="lessons">Занятия</string>
+    <string name="child_lessons">Занятия ребёнка</string>
 
     <string name="exit">Выход</string>
 </resources>
