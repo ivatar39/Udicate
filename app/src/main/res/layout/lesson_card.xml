@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageButton
-                android:backgroundTint="@color/colorPrimaryLight"
+                android:background="#D1CCCC"
                 android:id="@+id/bt_submit_task"
                 android:src="@drawable/ic_check_white_24dp"
                 android:layout_weight="1"
@@ -72,7 +72,7 @@
                 />
         </LinearLayout>
             <ImageButton
-                android:backgroundTint="@color/colorPrimaryLight"
+                android:backgroundTint="#D1CCCC"
                 android:id="@+id/bt_tinder"
                 android:src="@drawable/tinder"
                 android:layout_weight="1"
