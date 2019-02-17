@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,7 @@ import android.view.ViewGroup;
 import com.ivlup.udicate.R;
 import com.ivlup.udicate.backend.binding.LessonItem;
 import com.ivlup.udicate.backend.Temp;
-import com.ivlup.udicate.backend.education.Lesson;
+import com.ivlup.udicate.backend.objects.Lesson;
 import com.xwray.groupie.GroupAdapter;
 import com.xwray.groupie.Item;
 

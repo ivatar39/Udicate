@@ -1,13 +1,12 @@
 package com.ivlup.udicate.backend;
 
 import com.google.firebase.auth.FirebaseUser;
-import com.ivlup.udicate.backend.education.Lesson;
+import com.ivlup.udicate.backend.objects.Lesson;
 import com.ivlup.udicate.backend.users.Person;
 import com.ivlup.udicate.backend.users.Teacher;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Temp {

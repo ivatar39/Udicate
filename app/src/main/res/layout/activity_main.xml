@@ -20,7 +20,7 @@
     <android.support.design.widget.BottomNavigationView
         design:itemTextColor="#ffffff"
         design:itemIconTint="#ffffff"
-        android:background="@color/colorAccentDark"
+        android:background="@color/colorPrimary"
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

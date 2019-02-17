@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPrimaryDark"
-    android:fitsSystemWindows="true"
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
@@ -23,7 +22,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:textColorHighlight="@color/colorAccent"
-                android:id="@+id/editTextUserLogin"
+                android:id="@+id/et_reg_login"
                 android:inputType="textPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -40,7 +39,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:textColorHighlight="@color/colorAccent"
-                android:id="@+id/editTextUserName"
+                android:id="@+id/et_reg_name"
                 android:inputType="textPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -56,7 +55,7 @@
             android:layout_marginTop="16dp">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextEmail"
+                android:id="@+id/et_reg_email"
                 android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -72,7 +71,7 @@
             android:layout_marginTop="8dp">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextPassword"
+                android:id="@+id/et_reg_password"
                 android:layout_width="match_parent"
                 android:inputType="textPassword"
                 android:layout_height="wrap_content"
@@ -90,6 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <RadioButton
+                android:id="@+id/rbt_teacher"
                 android:layout_marginTop="4dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,6 +97,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:text="Преподаватель"/>
             <RadioButton
+                android:id="@+id/rbt_parent"
                 android:layout_marginTop="4dp"
                 android:textColor="@color/colorAccent"
                 android:layout_width="match_parent"
@@ -106,7 +107,7 @@
         </RadioGroup>
         <Button
             android:textSize="24sp"
-            android:id="@+id/buttonRegister"
+            android:id="@+id/bt_reg"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

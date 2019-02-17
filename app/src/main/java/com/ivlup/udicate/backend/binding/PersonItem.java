@@ -5,9 +5,8 @@ import android.view.View;
 
 import com.ivlup.udicate.R;
 import com.ivlup.udicate.backend.Temp;
-import com.ivlup.udicate.backend.education.Lesson;
+import com.ivlup.udicate.backend.objects.Lesson;
 import com.ivlup.udicate.backend.users.Person;
-import com.ivlup.udicate.databinding.PersonItemBinding;
 import com.ivlup.udicate.databinding.PersonItemBinding;
 import com.xwray.groupie.databinding.BindableItem;
 

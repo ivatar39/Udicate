@@ -9,7 +9,7 @@ import android.view.View;
 
 import com.ivlup.udicate.R;
 import com.ivlup.udicate.backend.Temp;
-import com.ivlup.udicate.backend.education.Lesson;
+import com.ivlup.udicate.backend.objects.Lesson;
 import com.ivlup.udicate.databinding.LessonItemBinding;
 import com.ivlup.udicate.fragment.LessonCardFragment;
 import com.xwray.groupie.databinding.BindableItem;
@@ -18,7 +18,7 @@ public class LessonItem extends BindableItem<LessonItemBinding>{
 
     private Lesson lesson;
 
-    public LessonItem(com.ivlup.udicate.backend.education.Lesson lesson) {
+    public LessonItem(com.ivlup.udicate.backend.objects.Lesson lesson) {
         this.lesson = lesson;
     }
 

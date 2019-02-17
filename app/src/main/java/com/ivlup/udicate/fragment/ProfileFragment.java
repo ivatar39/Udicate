@@ -28,22 +28,18 @@ public class ProfileFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         ImageView mProfilePic = (ImageView) view.findViewById(R.id.profile_pic);
-        Picasso.get()
-                .load(Temp.teacher.avatar)
-                .resize(300,400)
-                .centerCrop()
-                .into(mProfilePic);
+       // Picasso.get().load(Temp.teacher.avatar).resize(300,400).centerCrop().into(mProfilePic);
 
         TextView mName = (TextView) view.findViewById(R.id.profile_name);
-        mName.setText(Temp.teacher.name+" "+Temp.teacher.surname);
+       // mName.setText(Temp.teacher.name+" "+Temp.teacher.surname);
 
         TextView mStage = (TextView) view.findViewById(R.id.profile_stage);
-        mStage.setText(Temp.teacher.email);
+       // mStage.setText(Temp.teacher.email);
         TextView mSpeciality = (TextView) view.findViewById(R.id.profile_speciality);
-        mSpeciality.setText(Temp.teacher.phone);
+       // mSpeciality.setText(Temp.teacher.phone);
 
         TextView mAbout = (TextView) view.findViewById(R.id.profile_about);
-        mAbout.setText(Temp.teacher.info);
+       // mAbout.setText(Temp.teacher.info);
 
         TextView mPlace = (TextView)  view.findViewById(R.id.profile_work);
         mPlace.setText("Академия гениев");

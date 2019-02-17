@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 
-import android.support.design.button.MaterialButton;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,8 +12,10 @@ import android.widget.Toast;
 
 import com.ivlup.udicate.R;
 
+import java.util.Objects;
+
 public class RegistrationActivity extends AppCompatActivity {
-    Button register;
+    Button mRegister;
     TextInputEditText mLogin, mName, mEmail, mPassword;
     String login, name, email, password;
 
@@ -23,18 +24,17 @@ public class RegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
+        mRegister   = (Button)            (findViewById(R.id.bt_reg));
+        mLogin      = (TextInputEditText) (findViewById(R.id.et_reg_login));
+        mName       = (TextInputEditText) (findViewById(R.id.et_reg_name));
+        mEmail      = (TextInputEditText) (findViewById(R.id.et_reg_email));
+        mPassword   = (TextInputEditText) (findViewById(R.id.et_reg_password));
 
-        register = (Button) (findViewById(R.id.buttonRegister));
-        mLogin = (TextInputEditText) (findViewById(R.id.editTextUserLogin));
-        mName = (TextInputEditText) (findViewById(R.id.editTextUserName));
-        mEmail = (TextInputEditText) (findViewById(R.id.editTextEmail));
-        mPassword = (TextInputEditText) (findViewById(R.id.editTextPassword));
-
-        register.setOnClickListener(new View.OnClickListener() {
+        mRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gatherInfo();
-                createSubjectsIntent();
+                if (checkInfo()) createSubjectsIntent();
+                  else  Toast.makeText(getApplicationContext(), "Не все поля заполнены!" , Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -46,14 +46,20 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     private void gatherInfo() {
-        if (mEmail.getText().length() > 3 && mPassword.getText().length() > 3) {
-            email = String.valueOf(mEmail.getText());
-            password = String.valueOf(mPassword.getText());
-            login = String.valueOf(mLogin.getText());
-            name = String.valueOf(mName.getText());
-        }
-        else {
-            Toast.makeText(this, "Не все поля заполнены!" , Toast.LENGTH_SHORT).show();
-        }
+        email    = mEmail.getText().toString();
+        password = mPassword.getText().toString();
+        login    = mLogin.getText().toString();
+        name     = mName.getText().toString();
     }
+
+    private boolean checkInfo() {
+        if (
+
+                mEmail.getText().toString().length() > 3   && mPassword.getText().toString().length() > 3 && mLogin.getText().toString().length() > 3 && mName.getText().toString().length() > 3) {
+            gatherInfo();
+            return true;
+        }
+        return false;
+    }
+
 }

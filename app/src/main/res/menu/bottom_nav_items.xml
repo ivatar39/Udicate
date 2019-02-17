@@ -7,7 +7,7 @@
         />
     <item
         android:id="@+id/menu_chat"
-        android:title="Чат"
+        android:title="Организации"
         android:icon="@drawable/ic_chat_white_24dp"
         />
 

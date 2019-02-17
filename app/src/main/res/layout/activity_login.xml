@@ -39,21 +39,23 @@
     android:layout_height="0dp">
 
     <android.support.v7.widget.AppCompatButton
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
 
         android:id="@+id/bt_enter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="вход"
-        android:background="#ffffff"
-        android:textColor="@color/colorAccentDark"
+        android:background="@color/colorWhite"
+        android:textColor="@color/colorBlack"
         android:layout_marginBottom="10dp"/>
 
     <android.support.v7.widget.AppCompatButton
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:id="@+id/bt_reg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="регистрация"
-        android:background="#ffffff"
-        android:textColor="@color/colorAccentDark"/>
+        android:background="@color/colorWhite"
+        android:textColor="@color/colorBlack"/>
 </LinearLayout>
 </LinearLayout>

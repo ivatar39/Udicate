@@ -17,13 +17,9 @@ import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.ivlup.udicate.R;
-import com.ivlup.udicate.backend.education.Lesson;
-import com.ivlup.udicate.backend.users.Person;
-import com.ivlup.udicate.fragment.ChatFragment;
+import com.ivlup.udicate.fragment.OrganizationsFragment;
 import com.ivlup.udicate.fragment.ProfileFragment;
 import com.ivlup.udicate.fragment.LessonListFragment;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(getApplicationContext(), "Entering menu", Toast.LENGTH_SHORT).show();
         mBottomNav = (BottomNavigationView) (findViewById(R.id.navigation));
         mBottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -85,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 fragmentTransaction.commit();
                 break;
             case R.id.menu_chat:
-                mChat = new ChatFragment();
+                mChat = new OrganizationsFragment();
                 fragmentTransaction.replace(R.id.container, mChat);
                 fragmentTransaction.commit();
                 break;

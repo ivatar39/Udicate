@@ -1,4 +1,4 @@
-package com.ivlup.udicate.backend.education;
+package com.ivlup.udicate.backend.objects;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 

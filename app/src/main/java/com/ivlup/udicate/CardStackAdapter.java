@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.ivlup.udicate.backend.education.Person;
+import com.ivlup.udicate.backend.objects.Person;
 
 import java.util.List;
 
@@ -28,7 +28,7 @@ public class CardStackAdapter extends RecyclerView.Adapter<CardStackAdapter.View
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(inflater.inflate(R.layout.item_spot, parent, false));
+        return new ViewHolder(inflater.inflate(R.layout.item_person, parent, false));
 
     }
 

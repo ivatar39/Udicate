@@ -1,6 +1,4 @@
-package com.ivlup.udicate.backend.education;
-
-import android.graphics.Bitmap;
+package com.ivlup.udicate.backend.objects;
 
 public class Subject {
     private String  name;

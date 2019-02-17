@@ -4,29 +4,34 @@
 
     <application
         android:screenOrientation="portrait"
-        android:configChanges="orientation|keyboardHidden"
+        android:configChanges="orientation|keyboardHidden|screenSize"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.FirebaseUIActivity">
+        <activity android:name=".activity.FirebaseUIActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".activity.MainActivity">
 
-
-
         </activity>
-        <activity android:name=".activity.RegistrationActivity"></activity>
-        <activity android:name=".activity.SwipeActivity"></activity>
-        <activity android:name=".activity.LoginActivity"></activity>
-        <activity android:name=".activity.SubjectsActivity"></activity>
+
+
+        <activity android:name=".activity.RegistrationActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.SwipeActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.EnterActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.SubjectsActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

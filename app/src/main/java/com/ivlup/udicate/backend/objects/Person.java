@@ -1,4 +1,4 @@
-package com.ivlup.udicate.backend.education;
+package com.ivlup.udicate.backend.objects;
 
 public class Person {
     private static int counter = 0;

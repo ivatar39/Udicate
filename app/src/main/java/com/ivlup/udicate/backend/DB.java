@@ -8,16 +8,14 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.ivlup.udicate.backend.education.Lesson;
+import com.ivlup.udicate.backend.objects.Lesson;
 import com.ivlup.udicate.backend.users.Person;
 import com.ivlup.udicate.backend.users.Teacher;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class DB {
 

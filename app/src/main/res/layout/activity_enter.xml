@@ -3,21 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorPrimaryDark"
     android:fitsSystemWindows="true"
+    android:background="@color/colorPrimary"
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:orientation="vertical">
-
-
-
-
 
         <android.support.design.widget.TextInputLayout
             android:textColorHint="@color/colorAccent"
@@ -26,6 +23,7 @@
             android:layout_marginTop="16dp">
 
             <android.support.design.widget.TextInputEditText
+                android:textColor="@color/colorWhite"
                 android:id="@+id/editTextEmailLogin"
                 android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
@@ -42,6 +40,7 @@
             android:layout_marginTop="8dp">
 
             <android.support.design.widget.TextInputEditText
+                android:textColor="@color/colorWhite"
                 android:id="@+id/editTextPasswordLogin"
                 android:layout_width="match_parent"
                 android:inputType="textPassword"
@@ -57,8 +56,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="войти"
-            android:background="#ffffff"
-            android:textColor="@color/colorAccentDark"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/colorBlack"
            />
 
     </LinearLayout>

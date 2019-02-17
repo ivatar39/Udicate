@@ -2,7 +2,7 @@ package com.ivlup.udicate;
 
 import android.support.v7.util.DiffUtil;
 
-import com.ivlup.udicate.backend.education.Person;
+import com.ivlup.udicate.backend.objects.Person;
 
 import java.util.List;
 

@@ -23,10 +23,6 @@ import java.util.List;
 
 public class FirebaseUIActivity extends AppCompatActivity implements DB.Callback {
 
-    private static final int RC_SIGN_IN = 123;
-    public static final int STUDENT_PARENT = 1;
-    public static final int TEACHER = 2;
-    public static final int OFFLINE = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +31,6 @@ public class FirebaseUIActivity extends AppCompatActivity implements DB.Callback
         setContentView(R.layout.activity_login);
 
         new DB().getLessons();
-        ActionBar bar = getActionBar();
-        //bar.setBackgroundDrawable(new ColorDrawable("COLOR"));
 
         Button mBtEnter = (Button) (findViewById(R.id.bt_enter));
         Button mBtReg = (Button) (findViewById(R.id.bt_reg));
@@ -44,11 +38,9 @@ public class FirebaseUIActivity extends AppCompatActivity implements DB.Callback
         mBtEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent intent = new Intent(FirebaseUIActivity.this, LoginActivity.class);
-               startActivity(intent);
+               createEnterIntent();
             }
         });
-        //createSignInIntent();
 
         mBtReg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +55,13 @@ public class FirebaseUIActivity extends AppCompatActivity implements DB.Callback
         startActivity(intent);
     }
 
-    public void createSignInIntent() {
+    private void createEnterIntent() {
+        Intent intent = new Intent(FirebaseUIActivity.this, EnterActivity.class);
+        startActivity(intent);
+    }
+
+
+   /* public void createSignInIntent() {
 
         // [START auth_fui_create_intent]
         // Choose authentication providers
@@ -135,21 +133,22 @@ public class FirebaseUIActivity extends AppCompatActivity implements DB.Callback
                 RC_SIGN_IN);
         // [END auth_fui_theme_logo]
     }
-*/
+
 
 
     public void CheckUserStatus(String key) {
-        /*
-        1 = Ученик / Родитель
-        2 = Преподаватель
-        3 = Нет в системе
-         */
+
+       // 1 = Ученик / Родитель
+       // 2 = Преподаватель
+       // 3 = Нет в системе
+
         Log.i("MyLog", key);
         DB db = new DB();
         db.registerCallBack(this);
         db.getPersonById(key);
         db.getTeacherById(key);
     }
+   */
 
     @Override
     public void callingBack(){
@@ -175,7 +174,5 @@ public class FirebaseUIActivity extends AppCompatActivity implements DB.Callback
                 startActivity(intent);
             }
         }
-
     }
-
 }

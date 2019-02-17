@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 import android.view.View;
 
 import com.ivlup.udicate.R;
-import com.ivlup.udicate.backend.education.Subject;
+import com.ivlup.udicate.backend.objects.Subject;
 import com.ivlup.udicate.databinding.SubjectItemBinding;
 import com.squareup.picasso.Picasso;
 import com.xwray.groupie.databinding.BindableItem;
@@ -26,7 +26,7 @@ public class SubjectItem extends BindableItem<SubjectItemBinding> {
                 viewBinding.subjectCheckBox.toggle();
             }
         });
-        //Picasso.get().load(subject.getImage()).into(viewBinding.ivSubject);
+        Picasso.get().load(subject.getImage()).into(viewBinding.ivSubjectImage);
     }
 
     @Override
