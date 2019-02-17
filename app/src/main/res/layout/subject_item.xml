@@ -27,6 +27,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:layout_marginLeft="14dp"
                     android:id="@+id/iv_subject_image"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
@@ -44,6 +45,7 @@
                     android:text="ученик"/>
 
                 <CheckBox
+                    android:layout_marginRight="4dp"
                     android:id="@+id/subject_check_box"
                     android:layout_width="wrap_content"
                     android:layout_margin="10dp"

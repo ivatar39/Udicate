@@ -22,7 +22,8 @@ public class TeacherActivity extends AppCompatActivity {
     private BottomNavigationView mBottomNav;
     private static final String SELECTED_ITEM = "arg_selected_item";
     private int mSelectedItem;
-    Fragment Organization, mProfile, mLessons;
+    private Fragment Organization, mProfile, mLessons;
+    private Toolbar myToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,7 @@ public class TeacherActivity extends AppCompatActivity {
             }
         });
 
-        Toolbar myToolbar =  findViewById(R.id.my_toolbar);
+        myToolbar =  findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
         MenuItem selectedItem;
@@ -117,9 +118,9 @@ public class TeacherActivity extends AppCompatActivity {
     }
 
     private void updateToolbarText(CharSequence text) {
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setTitle(text);
+
+        if (myToolbar != null) {
+            myToolbar.setTitle(text);
         }
     }
 

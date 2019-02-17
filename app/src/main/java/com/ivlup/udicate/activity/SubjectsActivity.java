@@ -35,7 +35,7 @@ public class SubjectsActivity extends AppCompatActivity {
 
         subject =new Subject("Математика", false, R.drawable.division);
         subjectList.add(subject);
-        subject =new Subject("Спорт", false, R.drawable.football);
+        subject =new Subject("Спорт",false, R.drawable.football);
         subjectList.add(subject);
         subject =new Subject("Языки", false, R.drawable.language);
         subjectList.add(subject);

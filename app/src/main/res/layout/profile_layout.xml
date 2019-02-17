@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="Стаж"
+            android:text="Email"
             style="@style/TextAppearance.AppCompat.Medium"/>
         <TextView
             android:id="@+id/profile_speciality"
@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="Место работы"
+            android:text="Место учёбы/работы"
             style="@style/TextAppearance.AppCompat.Medium"/>
         <TextView
             android:id="@+id/profile_about"
