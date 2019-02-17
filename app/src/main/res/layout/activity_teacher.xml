@@ -37,6 +37,5 @@
         android:background="@color/colorPrimary"
         design:itemIconTint="#ffffff"
         design:itemTextColor="#ffffff"
-        design:menu="@menu/bottom_nav_items"
-        app:menu="@menu/bottom_nav_pt_items" />
+        app:menu="@menu/bottom_nav_teacher_items" />
 </LinearLayout>

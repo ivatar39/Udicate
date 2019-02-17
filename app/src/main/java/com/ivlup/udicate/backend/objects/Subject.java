@@ -3,12 +3,12 @@ package com.ivlup.udicate.backend.objects;
 public class Subject {
     private String  name;
     private Boolean checked;
-    private String  image;
+    private int  image;
 
     public Subject() {
     }
 
-    public Subject(String name, Boolean checked, String image) {
+    public Subject(String name, Boolean checked, int image) {
         this.name = name;
         this.checked = checked;
         this.image = image;
@@ -30,11 +30,11 @@ public class Subject {
         this.checked = checked;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 }

@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class SubjectsActivity extends AppCompatActivity {
     ArrayList<Subject> subjectList;
     RecyclerView mRecyclerView;
+    Subject subject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +31,19 @@ public class SubjectsActivity extends AppCompatActivity {
 
     private void fetchSubjects() {
         subjectList = new ArrayList<>();
-        for (int i = 0; i < 4; i ++) {
-            Subject subject =new Subject("Математика", false, "https://www.pic.com.kw/slider2.png");
-            subjectList.add(subject);
-        }
+        subjectList.clear();
+
+        subject =new Subject("Математика", false, R.drawable.division);
+        subjectList.add(subject);
+        subject =new Subject("Спорт", false, R.drawable.football);
+        subjectList.add(subject);
+        subject =new Subject("Языки", false, R.drawable.language);
+        subjectList.add(subject);
+        subject =new Subject("ИТ", false, R.drawable.chip);
+        subjectList.add(subject);
+        subject =new Subject("Физика", false, R.drawable.atomic);
+        subjectList.add(subject);
+
     }
 
 
@@ -47,7 +57,6 @@ public class SubjectsActivity extends AppCompatActivity {
             items.add(new SubjectItem(subject));
         }
         adapter.addAll(items);
-
         mRecyclerView.setAdapter(adapter);
     }
 }
