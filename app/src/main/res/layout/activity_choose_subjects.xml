@@ -14,15 +14,20 @@
 
 </android.support.v7.widget.RecyclerView>
 <android.support.v7.widget.AppCompatButton
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="12dp"
     android:layout_alignParentBottom="true"
     android:layout_marginTop="16dp"
-    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
     android:id="@+id/button_accept_subjects"
     android:layout_width="match_parent"
-    android:gravity="center"
+
     android:layout_height="wrap_content"
     android:text="принять"
-    android:backgroundTint="@color/colorAccent"
-    android:textColor="@color/colorBlack"
+
+    android:gravity="center"
+    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+    android:background="@drawable/btn_rounded"
+    android:textColor="@color/colorPrimaryDark"
     />
 </RelativeLayout>

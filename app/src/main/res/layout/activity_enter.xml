@@ -51,13 +51,14 @@
 
         <android.support.v7.widget.AppCompatButton
             android:layout_marginTop="16dp"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:id="@+id/buttonEnter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="войти"
-            android:backgroundTint="@color/colorAccent"
-            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:background="@drawable/btn_rounded"
+            android:textColor="@color/colorPrimaryDark"
            />
 
     </LinearLayout>

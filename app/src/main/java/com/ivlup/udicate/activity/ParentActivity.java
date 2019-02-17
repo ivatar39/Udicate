@@ -82,17 +82,17 @@ public class ParentActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.menu_person_lessons:
                 mLessonsPerson = new LessonsPersonFragment();
-                fragmentTransaction.replace(R.id.container, mLessonsPerson);
+                fragmentTransaction.replace(R.id.pt_container, mLessonsPerson);
                 fragmentTransaction.commit();
                 break;
             case R.id.menu_organizations:
                 mOrganizations = new OrganizationsFragment();
-                fragmentTransaction.replace(R.id.container, mOrganizations);
+                fragmentTransaction.replace(R.id.pt_container, mOrganizations);
                 fragmentTransaction.commit();
                 break;
             case R.id.menu_pt_profile:
                 mProfile = new ProfileFragment();
-                fragmentTransaction.replace(R.id.container, mProfile);
+                fragmentTransaction.replace(R.id.pt_container, mProfile);
                 fragmentTransaction.commit();
                 break;
         }
