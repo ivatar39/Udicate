@@ -11,7 +11,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.ivlup.udicate.backend.objects.Lesson;
 import com.ivlup.udicate.backend.users.Person;
-import com.ivlup.udicate.backend.users.Teacher;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -54,23 +53,7 @@ public class DB {
             }
         });
     }
-    public void getTeacherById(String id) {
 
-        mDatabase.child("users").child("teachers").child(id).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Temp.teacher = dataSnapshot.getValue(Teacher.class);
-                Temp.start += 1;
-                callback.callingBack();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.i("MyLog", "Erorrrrrrrrrrrrrrrrrrrrrrrr");
-            }
-        });
-
-    }
     public void getLessons() {
         mDatabase.child("education").child("lessons").addListenerForSingleValueEvent(new ValueEventListener() {
 

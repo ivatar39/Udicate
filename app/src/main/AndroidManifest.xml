@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ivlup.udicate">
-
     <application
         android:screenOrientation="portrait"
         android:configChanges="orientation|keyboardHidden|screenSize"
@@ -35,4 +34,5 @@
             android:screenOrientation="portrait"></activity>
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

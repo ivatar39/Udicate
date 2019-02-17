@@ -1,27 +1,42 @@
 package com.ivlup.udicate.backend.repository;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public abstract class FirebaseRepository {
+public abstract class LoginRepository {
+    //Для входа в Firebase
     private static FirebaseAuth mAuth;
-    @SuppressLint("StaticFieldLeak")
-    private static GoogleSignInClient mGoogleSignInClient;
+    // Пользователь из authentification
+    private static FirebaseUser user;
 
-    public static void setmGoogleSignInClient(GoogleSignInClient mGoogleSignInClient) {
-        FirebaseRepository.mGoogleSignInClient = mGoogleSignInClient;
+    public static FirebaseUser getUser() {
+        return user;
+    }
+
+    public static void setUser(FirebaseUser user) {
+        LoginRepository.user = user;
+    }
+
+    public static void setmAuth(FirebaseAuth mAuth) {
+        LoginRepository.mAuth = mAuth;
+    }
+
+    public interface Callback{
+        void userBack();
+    }
+
+    static Callback callback;
+
+
+    public static void registerCallBack(Callback callback){
+        LoginRepository.callback = callback;
     }
 
     public static boolean checkUser(){
@@ -40,28 +55,15 @@ public abstract class FirebaseRepository {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.i("MyTag", "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Log.i("Auth", "Всё окич )");
+                            setUser(mAuth.getCurrentUser());
+                            callback.userBack();
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.i("Auth", "Догин или пароль введены не верно");
+                            callback.userBack();
                         }
                     }
                 });
-    }
-
-    public static void setmAuth(FirebaseAuth mAuth) {
-        FirebaseRepository.mAuth = mAuth;
-    }
-
-    void configueGoogleSign(Context context){
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-        setmGoogleSignInClient(GoogleSignIn.getClient(context, gso));
-    }
-    void googleLogin(Context context){
-
     }
 
 

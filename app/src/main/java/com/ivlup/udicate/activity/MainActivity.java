@@ -1,6 +1,5 @@
 package com.ivlup.udicate.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.ColorRes;
 import android.support.annotation.NonNull;
@@ -12,15 +11,11 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-import com.firebase.ui.auth.AuthUI;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.ivlup.udicate.R;
+import com.ivlup.udicate.fragment.LessonListFragment;
 import com.ivlup.udicate.fragment.OrganizationsFragment;
 import com.ivlup.udicate.fragment.ProfileFragment;
-import com.ivlup.udicate.fragment.LessonListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -77,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_exit:
-                signOut();
                 return true;
                 default: return super.onOptionsItemSelected(item);
         }
@@ -131,20 +125,6 @@ public class MainActivity extends AppCompatActivity {
 
     private int getColorFromRes(@ColorRes int resId) {
         return ContextCompat.getColor(this, resId);
-    }
-
-    public void signOut() {
-        // [START auth_fui_signout]
-        AuthUI.getInstance()
-                .signOut(this)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    public void onComplete(@NonNull Task<Void> task) {
-                        Intent intent = new Intent(MainActivity.this, FirebaseUIActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                });
-        // [END auth_fui_signout]
     }
 
    /* private void fetchTasks() {
