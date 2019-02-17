@@ -18,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity"
+        <activity android:name=".activity.TeacherActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         </activity>
@@ -31,6 +31,8 @@
         <activity android:name=".activity.EnterActivity"
             android:screenOrientation="portrait"></activity>
         <activity android:name=".activity.SubjectsActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activity.ParentActivity"
             android:screenOrientation="portrait"></activity>
     </application>
 

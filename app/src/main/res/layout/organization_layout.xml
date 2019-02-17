@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_org_profile_pic"
+        android:src="@drawable/ic_person_white_24dp"
+        android:background="@color/colorAccent"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <ScrollView
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="outsideOverlay"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="14dp"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="Имя Организации"
+                style="@style/TextAppearance.AppCompat.Large"/>
+
+            <TextView
+                android:id="@+id/profile_stage"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="14dp"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Стаж"
+                style="@style/TextAppearance.AppCompat.Medium"/>
+            <TextView
+                android:id="@+id/profile_speciality"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="14dp"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Специальность"
+                style="@style/TextAppearance.AppCompat.Medium"/>
+
+            <TextView
+                android:id="@+id/profile_work"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="14dp"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Место работы"
+                style="@style/TextAppearance.AppCompat.Medium"/>
+            <TextView
+                android:id="@+id/profile_about"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="14dp"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="О себе"
+                style="@style/TextAppearance.AppCompat.Subhead"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

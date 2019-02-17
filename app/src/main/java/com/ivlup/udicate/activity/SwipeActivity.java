@@ -16,7 +16,7 @@ import com.ivlup.udicate.R;
 import com.ivlup.udicate.PersonDiffCallback;
 import com.ivlup.udicate.backend.Temp;
 import com.ivlup.udicate.backend.objects.Lesson;
-import com.ivlup.udicate.fragment.LessonCardFragment;
+import com.ivlup.udicate.fragment.teacher.LessonCardFragment;
 import com.xwray.groupie.Item;
 import com.yuyakaido.android.cardstackview.CardStackLayoutManager;
 import com.yuyakaido.android.cardstackview.CardStackListener;

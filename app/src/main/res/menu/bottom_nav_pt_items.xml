@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_person_lessons"
+        android:title="@string/child_lessons"
+        android:icon="@drawable/ic_child_care_white_24dp"
+        />
+    <item
+        android:id="@+id/menu_organizations"
+        android:title="@string/organizations"
+        android:icon="@drawable/ic_business_white_24dp"
+        />
+
+    <item
+        android:id="@+id/menu_pt_profile"
+        android:title="@string/profile"
+        android:icon="@drawable/ic_person_white_24dp" />
+
+</menu>

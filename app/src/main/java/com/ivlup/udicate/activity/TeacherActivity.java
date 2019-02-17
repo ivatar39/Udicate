@@ -13,21 +13,21 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.ivlup.udicate.R;
-import com.ivlup.udicate.fragment.LessonListFragment;
-import com.ivlup.udicate.fragment.OrganizationsFragment;
-import com.ivlup.udicate.fragment.ProfileFragment;
+import com.ivlup.udicate.fragment.teacher.LessonListFragment;
+import com.ivlup.udicate.fragment.parent.OrganizationsFragment;
+import com.ivlup.udicate.fragment.teacher.ProfileFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class TeacherActivity extends AppCompatActivity {
 
     private BottomNavigationView mBottomNav;
     private static final String SELECTED_ITEM = "arg_selected_item";
     private int mSelectedItem;
-    Fragment mChat, mProfile, mTasks;
+    Fragment Organization, mProfile, mLessons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_teacher);
 
         mBottomNav = (BottomNavigationView) (findViewById(R.id.navigation));
         mBottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -81,17 +81,17 @@ public class MainActivity extends AppCompatActivity {
         final FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         // init corresponding fragment
         switch (item.getItemId()) {
-            case R.id.menu_tasks:
-                mTasks = new LessonListFragment();
-                fragmentTransaction.replace(R.id.container, mTasks);
+            case R.id.menu_lessons:
+                mLessons = new LessonListFragment();
+                fragmentTransaction.replace(R.id.container, mLessons);
                 fragmentTransaction.commit();
                 break;
-            case R.id.menu_chat:
-                mChat = new OrganizationsFragment();
-                fragmentTransaction.replace(R.id.container, mChat);
+            case R.id.menu_organization:
+                Organization = new OrganizationsFragment();
+                fragmentTransaction.replace(R.id.container, Organization);
                 fragmentTransaction.commit();
                 break;
-            case R.id.menu_profile:
+            case R.id.menu_teacher_profile:
                 mProfile = new ProfileFragment();
                 fragmentTransaction.replace(R.id.container, mProfile);
                 fragmentTransaction.commit();
@@ -126,18 +126,6 @@ public class MainActivity extends AppCompatActivity {
     private int getColorFromRes(@ColorRes int resId) {
         return ContextCompat.getColor(this, resId);
     }
-
-   /* private void fetchTasks() {
-        for (Lesson less : Temp.lessons) {
-
-            arrayObjectLessons.add(less);
-        }
-        for (int i = 0; i < 20; i++) {
-            Person p = new Person();
-            p.name = "Иван " + i;
-            arrayObjectPersons.add(p);
-        }
-    }*/
 
 
 }

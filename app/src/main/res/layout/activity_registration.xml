@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorPrimary"
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
@@ -15,41 +15,43 @@
         android:orientation="vertical">
 
         <android.support.design.widget.TextInputLayout
-            android:textColorHint="@color/colorAccent"
+            android:textColorHint="@color/colorAccentLight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp">
 
             <android.support.design.widget.TextInputEditText
-                android:textColorHighlight="@color/colorAccent"
+                android:textColorHighlight="@color/colorWhite"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorAccentLight"
                 android:id="@+id/et_reg_login"
                 android:inputType="textPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Логин"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorAccent"/>
+                />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:textColorHint="@color/colorAccent"
+            android:textColorHint="@color/colorAccentLight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp">
 
             <android.support.design.widget.TextInputEditText
-                android:textColorHighlight="@color/colorAccent"
+                android:textColorHighlight="@color/colorWhite"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorAccentLight"
                 android:id="@+id/et_reg_name"
                 android:inputType="textPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="ФИО"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorAccent"/>
+               />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:textColorHint="@color/colorAccent"
+            android:textColorHint="@color/colorAccentLight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp">
@@ -59,18 +61,24 @@
                 android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email" />
+                android:hint="Email"
+                android:textColorHighlight="@color/colorWhite"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorAccentLight"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:textColorHint="@color/colorAccent"
+            android:textColorHint="@color/colorAccentLight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/colorAccent"
+            app:passwordToggleTint="@color/colorAccentLight"
             android:layout_marginTop="8dp">
 
             <android.support.design.widget.TextInputEditText
+                android:textColorHighlight="@color/colorWhite"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorAccentLight"
                 android:id="@+id/et_reg_password"
                 android:layout_width="match_parent"
                 android:inputType="textPassword"
@@ -84,7 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Выберите роль:"
-            android:textColor="@color/colorAccent"/>
+            android:textColor="@color/colorAccentLight"/>
         <RadioGroup
             android:id="@+id/rg_type"
             android:layout_width="match_parent"
@@ -94,28 +102,31 @@
                 android:layout_marginTop="4dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorAccentLight"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:text="Преподаватель"/>
             <RadioButton
                 android:id="@+id/rbt_parent"
                 android:layout_marginTop="4dp"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorAccentLight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:text="Родитель"/>
         </RadioGroup>
-        <Button
+        <android.support.v7.widget.AppCompatButton
             android:textSize="24sp"
             android:id="@+id/bt_reg"
-            style="@style/Widget.MaterialComponents.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="Зарегистрироваться" />
+            android:text="Зарегистрироваться"
+            android:gravity="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:background="@drawable/btn_rounded"
+            android:textColor="@color/colorPrimaryDark"/>
 
 
     </LinearLayout>

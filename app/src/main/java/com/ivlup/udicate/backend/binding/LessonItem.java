@@ -11,7 +11,7 @@ import com.ivlup.udicate.R;
 import com.ivlup.udicate.backend.Temp;
 import com.ivlup.udicate.backend.objects.Lesson;
 import com.ivlup.udicate.databinding.LessonItemBinding;
-import com.ivlup.udicate.fragment.LessonCardFragment;
+import com.ivlup.udicate.fragment.teacher.LessonCardFragment;
 import com.xwray.groupie.databinding.BindableItem;
 
 public class LessonItem extends BindableItem<LessonItemBinding>{

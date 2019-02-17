@@ -145,7 +145,7 @@ public class FirebaseUIActivity extends AppCompatActivity implements DB.Callback
         if(Temp.start == 2){
             if (Temp.person != null) {
                 Temp.who = 1;
-                Intent intent = new Intent(FirebaseUIActivity.this, MainActivity.class);
+                Intent intent = new Intent(FirebaseUIActivity.this, TeacherActivity.class);
                 startActivity(intent);
             }
 
@@ -153,7 +153,7 @@ public class FirebaseUIActivity extends AppCompatActivity implements DB.Callback
                 Temp.who = 2;
                 Log.i("MyLog", String.valueOf(Temp.who));
                 Log.i("MyLog", "Go teach");
-                Intent intent = new Intent(FirebaseUIActivity.this, MainActivity.class);
+                Intent intent = new Intent(FirebaseUIActivity.this, TeacherActivity.class);
                 startActivity(intent);
             }
             else {

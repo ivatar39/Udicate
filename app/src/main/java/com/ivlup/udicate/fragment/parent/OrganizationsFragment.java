@@ -1,4 +1,4 @@
-package com.ivlup.udicate.fragment;
+package com.ivlup.udicate.fragment.parent;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

@@ -1,4 +1,4 @@
-package com.ivlup.udicate.fragment;
+package com.ivlup.udicate.fragment.teacher;
 
 import android.content.Intent;
 import android.os.Bundle;
